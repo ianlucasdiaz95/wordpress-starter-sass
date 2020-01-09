@@ -1,31 +1,34 @@
-.headerContent__mainNavigation{
+.nav{
     .menu {
-        list-style: none;
-        margin: 0;
-        padding: 0; 
-        display: flex;
-        .current-menu-item{
-            a{
-                color: $primary;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0; 
+            display: flex;
+            .current-menu-item{
+                a{
+                    color: $primary;
+                }
             }
-        }
-        a{
-            display: block;
-            color: $gray;
-            padding: 10px;
-            text-decoration: none;
-            font-weight: 600;
-            &:hover,&:active,&:focus{
-                color: $primary;
+            a{
+                display: block;
+                color: $gray;
+                padding: 10px;
+                text-decoration: none;
+                font-weight: 600;
+                &:hover,&:active,&:focus{
+                    color: $primary;
+                }
             }
         }
     }
+        
     @media screen and (max-width: 768px) {
         display: none;
     }
 }
 
-.headerContent__mobileNavigation{
+.nav.-mobile{
     transition: 300ms ease;
     position: fixed;
     height: 100vh;
@@ -51,7 +54,7 @@
 }
 
 
-.headerContent__menuToggle{
+.header__menuToggle{
     content: '';
     @include hamburgerBar($hamburguerWidth, $hamburguerHeight, $primary);
     position: relative;
@@ -72,5 +75,11 @@
     }
     @media screen and (min-width: 768px) {
         display: none;
+    }
+}
+
+.admin-bar{
+    .header{
+        margin-top: 32px !important;
     }
 }

@@ -18,29 +18,37 @@
 	
 <a class="screen-reader-text" href="#content">Saltar al contenido</a>
 
-<header class="siteHeader">
-	<div class="siteHeader__headerContent container">
-		<h1 class="headerContent__siteTitle"><?php bloginfo( 'name' ); ?></h1>
+<header class="header">
+	<div class="header__headerContent container">
+		<h1 class="header__siteTitle"><?php bloginfo( 'name' ); ?></h1>
 
-		<nav class="headerContent__mainNavigation">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
+		<nav class="header__nav">
+			
+			<div class="nav">
+
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+				?>
+
+			</div><!-- nav  -->
+
+			<div id="mobileMenu" class="nav -mobile -hidden">
+				<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+				?>
+			</div><!-- nav -mobile -->
+			
 		</nav>
 
-		<nav id="mobileMenu" class="headerContent__mobileNavigation -hidden">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav>
+		
 
-		<div id="menuToggle" class="headerContent__menuToggle" role="button"></div>
+		<div id="menuToggle" class="header__menuToggle" role="button"></div>
 	</div>
 </header>
 

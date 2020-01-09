@@ -23,7 +23,14 @@ $boxPadding: 16px;
 $containerMaxWidth: 1100px;
 $boxShadow: 0px 1px 3px rgba(0,0,0,0.16);
 
-//Header
+//Breakpoints
+$breakPointLarge: 1440px;
+$breakPointMedium: 991px;
+$breakPointSmall: 768px;
+$breakPointXSmall: 575px;
+
+// Header
+$headerLogoWidth: 120px;
 $headerHeight: 60px;
 
 //Hamburguer 

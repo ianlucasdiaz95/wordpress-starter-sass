@@ -84,14 +84,14 @@ function watcher() {
         /*server: {
             baseDir: "./"
         },*/
-        host: 'localhost/kesensa/',
-        proxy: "localhost/kesensa/",
+        host: 'localhost/bauldemoda/',
+        proxy: "localhost/bauldemoda/",
         port: 80,
         notify: false
     });
 
     watch(styleSrc, series(css));
-    watch('assets/css/*.css').on('change', browserSync.reload);
+    watch(['assets/css/*.css', './**/*.php', 'assets/js/**/*.js']).on('change', browserSync.reload);
 
 };
 
